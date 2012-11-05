@@ -1,0 +1,46 @@
+What I want:
+	A reusable text based adventure game engine.
+
+Features:
+*	Runs off of an external script. The script could take the form of a single file, or a directory tree as deemed necessary during development.
+*	The engine must be easy to use and to hack.
+
+Design:
+	This needs at least a basic text parser, a save system, a way to save "states" and a format for the external scripts.
+	
+	Parser:
+		The parser syntax would be something like:
+		
+		*	COMMAND [parameters]
+		
+		Where command could be any of these:
+		
+		*	inventory
+		*	open
+		*	close
+		*	pickup/take
+		*	drop/give
+		*	etc.
+	
+	Save system:
+		Needs to save each state correctly.
+	
+	State:
+		A state needs a name, and a value.
+		A state could be anything from health and money, to advancement through a plot, to the current location.
+	
+	Scripts:
+		The scripts will hold the indevidual games, form beginning to end, hopefully without any necessary modification to the engine.
+
+Choices:
+*	A premade engine
+*	A custom built engine
+*	hacking lua.c
+
+
+Example:
+	state:
+		health 100
+		money 0
+		door closed
+		
