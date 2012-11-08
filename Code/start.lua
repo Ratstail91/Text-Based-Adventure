@@ -9,7 +9,7 @@ end
 
 
 --probably improve this later
-if not file_exists("start.lua") or not file_exists("engine\\main") then
+if not file_exists("start.lua") or not file_exists("Engine/main") then
 	print("Directory error")
 	return
 end
@@ -21,8 +21,8 @@ local name = io.read()
 
 
 dir = {}
-dir.engine = "engine//"
-dir.game = "game//" .. name .. "//"
+dir.engine = "Engine/"
+dir.game = "Game/" .. name .. "/"
 
 
 dofile(dir.engine .. "main")
