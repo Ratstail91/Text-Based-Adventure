@@ -14,3 +14,7 @@ end
 
 -------------------------
 
+Game State:
+	Normal
+	Quit
+end
