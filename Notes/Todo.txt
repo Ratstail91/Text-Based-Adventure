@@ -7,3 +7,5 @@
 *		Room attributes
 *		character attributes
 
+*	"Intro" function
+*	a Module to generate locations, rooms, etc.

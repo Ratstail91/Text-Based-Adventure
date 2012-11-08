@@ -1,0 +1,34 @@
+--the gamestates available
+
+QUIT		= 0
+NORMAL		= 1
+PARSE_ERROR	= 2
+
+
+
+--includes
+
+dofile(dir.engine .. "parse")
+
+
+dofile(dir.game .. "main.lua")
+
+
+
+--main loop
+
+local state = NORMAL
+
+while state ~= QUIT do
+	--smooth, consistent interface
+	io.write("TBA>")
+	
+	local input = io.read()
+	
+	state = parse(input)
+	
+	if (state == PARSE_ERROR) then
+		print("Parse Error: ", input)
+	end
+end
+

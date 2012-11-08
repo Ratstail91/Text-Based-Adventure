@@ -1,0 +1,8 @@
+directories:
+
+	Gngine\
+	Game\
+
+"Engine\" holds the engine of the TBA, while "Game\" holds the different games available to play.
+
+

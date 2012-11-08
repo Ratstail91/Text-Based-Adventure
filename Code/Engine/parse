@@ -1,0 +1,38 @@
+
+--include
+dofile(dir.engine .. "actions")
+
+
+
+function parse(input) --TODO: strip initial command word out of these args
+	if input == "help" then
+		return dohelp(input)
+	end
+	
+	if input == "look" then
+		return dolook(input)
+	end
+	
+	if input == "exit" then
+		return doexit(input)
+	end
+	
+	--more to come
+	
+	return PARSE_ERROR
+end
+
+
+--standard generic actions go here
+
+function dohelp(input)
+	io.write("Help\n")
+	io.write("Still working on this game\n")
+	return NORMAL
+end
+
+function doexit(input)
+	io.write("Thanks for playing!\n")
+	return QUIT
+end
+

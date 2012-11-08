@@ -1,0 +1,16 @@
+
+--specialised, indepth actions go here
+
+function dolook(input)
+	io.write("You look around.\n")
+	
+	
+	--this would use room specific attributes
+	
+	io.write("You see a grue.\n")
+	io.write("You see a chair.\n")
+	io.write("I give you a hamburger.\n")
+	
+	return NORMAL
+end
+
