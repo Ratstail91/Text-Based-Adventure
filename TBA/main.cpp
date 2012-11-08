@@ -30,6 +30,8 @@ GameState parse(string s) {
 	if (s == "quit") {
 		return QUIT;
 	}
+
+	return NORMAL;
 }
 
 int main(int, char**) {

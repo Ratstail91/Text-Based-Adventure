@@ -18,3 +18,32 @@ Game State:
 	Normal
 	Quit
 end
+
+First Order Actions:
+	help
+	look
+	inventory
+	take
+	drop
+	give -?
+	do -context sensitive
+	move/door
+	wait
+end
+
+main:
+	GameState state = NORMAL
+	
+	while state != QUIT:
+		get input string
+		
+		state = parse(input string)
+	end
+	
+	out "thank you for playing!"
+end
+
+dohelp(string)
+dolook(string)
+...
+
