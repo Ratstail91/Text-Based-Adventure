@@ -1,0 +1,16 @@
+Parsing:
+
+input
+
+parse(string):
+	//check each first level command
+	sscanf(string, "%s", command)
+	
+	if (command == "look")
+		return CommandLook(string + strlen("look"))
+	
+	...
+end
+
+-------------------------
+

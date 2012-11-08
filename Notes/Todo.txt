@@ -1,0 +1,9 @@
+*	Parser
+*	Movement around several rooms, and several locations
+*	Saving/loading of rooms & locations
+
+*	game saves:
+*		Items attributes
+*		Room attributes
+*		character attributes
+

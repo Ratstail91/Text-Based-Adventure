@@ -1,0 +1,27 @@
+Room:
+	index
+	item list
+	door list
+end
+
+Door:
+	room index
+end
+
+-------------------------
+
+http://kr-studios.tumblr.com/post/35152525694/an-idea-for-the-tba-room-structure
+An idea for the TBA room structure
+location - a set of rooms loaded at once
+room - index, name, description, item list & door list; is saved with the save file so that items aren’t duplicated.
+item - game specific “thing”, to be implemented
+door - name, index, the name is what you type (i.e. “north”, “forward”) and the index is the room you move to.
+    structure
+    location:
+        room list
+    room:
+        door list
+        item list
+just an idea of how to implement movement in the TBA.
+
+-------------------------
