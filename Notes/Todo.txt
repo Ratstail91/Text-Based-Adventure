@@ -9,3 +9,4 @@
 
 *	"Intro" function
 *	a Module to generate locations, rooms, etc.
+*	Generic functions file for split, table size, etc.
