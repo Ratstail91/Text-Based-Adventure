@@ -25,3 +25,8 @@ door - name, index, the name is what you type (i.e. “north”, “forward”) and the 
 just an idea of how to implement movement in the TBA.
 
 -------------------------
+
+roomsystem:
+	newlocation -create an empty location object
+	newroom -create an empty room
+	newitem -create a new item
