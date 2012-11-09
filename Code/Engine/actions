@@ -1,7 +1,7 @@
 
 --specialised, indepth actions go here
 
-function dolook(input)
+function dolook(args)
 	io.write("You look around.\n")
 	
 	

@@ -1,21 +1,42 @@
 
+--[[
+
+	The parsing function splits the input string into an array, then 
+	selects the correct function to call based on the first argument. It passes 
+	the remaining arguments (after poping the first one) to the function called.
+
+--]]
+
+
 --include
+dofile(dir.engine .. "help")
 dofile(dir.engine .. "actions")
 
 
 
+--predefined utility functions
+local function split(str, c)
+	local array = {}
+	for w in string.gmatch(str, c) do
+		table.insert(array, w)
+	end
+	return array
+end
+
+
+
 function parse(input) --TODO: strip initial command word out of these args
-	if input == "help" then
-		return dohelp(input)
-	end
+	--get the array, & the command
+	local args = split(input, "%g+")
 	
-	if input == "look" then
-		return dolook(input)
-	end
+	local command = table.remove(args, 1)
 	
-	if input == "exit" then
-		return doexit(input)
-	end
+	
+	--select the correct function to call
+	if command == "help" then return dohelp(args) end
+	if command == "exit" then return doexit(args) end
+	if command == "quit" then return doexit(args) end
+	if command == "look" then return dolook(args) end
 	
 	--more to come
 	
@@ -25,13 +46,7 @@ end
 
 --standard generic actions go here
 
-function dohelp(input)
-	io.write("Help\n")
-	io.write("Still working on this game\n")
-	return NORMAL
-end
-
-function doexit(input)
+function doexit(args)
 	io.write("Thanks for playing!\n")
 	return QUIT
 end
