@@ -2,7 +2,12 @@
 --include
 dofile(dir.engine .. "actions")
 
-
+commands = {
+["help"] = "Displays this help.",
+["look"] = "Displays information about the current room.",
+["exit"] = "Exits the game.",
+["quit"] = "Alias of exit."
+}
 
 function parse(input) --TODO: strip initial command word out of these args
 	if input == "help" then
@@ -17,6 +22,10 @@ function parse(input) --TODO: strip initial command word out of these args
 		return doexit(input)
 	end
 	
+	if input == "quit" then
+		return doexit(input)
+	end
+	
 	--more to come
 	
 	return PARSE_ERROR
@@ -27,7 +36,9 @@ end
 
 function dohelp(input)
 	io.write("Help\n")
-	io.write("Still working on this game\n")
+	for key,value in pairs(commands)
+		do io.write(key .. ": " .. value .. "\n")
+	end
 	return NORMAL
 end
 
