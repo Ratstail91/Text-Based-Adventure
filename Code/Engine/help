@@ -1,0 +1,35 @@
+--all of the various help functions
+
+
+local commands = {
+["help"] = "Displays this help.",
+["look"] = "Displays information about the current room.",
+["exit"] = "Exits the game.",
+["quit"] = "Alias of exit."
+}
+
+
+local function tablesize(t) --see TODO.txt
+	local count = 0
+	for _ in pairs(t) do count = count + 1 end
+	return count
+end
+
+
+
+function dohelp(args)
+	--generic help
+	if table.size(args) == 0 then
+		io.write("Help\n")
+		for key,value in pairs(commands)
+			do io.write(key .. ": " .. value .. "\n")
+		end
+		return NORMAL
+	end
+	
+	--specialised help, in their own functions
+	
+	--etc.
+	
+	return NORMAL
+end
