@@ -8,8 +8,9 @@ PARSE_ERROR	= 2
 
 --includes
 
-dofile(dir.engine .. "parse")
+dofile(dir.engine .. "active")
 
+dofile(dir.engine .. "parse")
 
 dofile(dir.game .. "main.lua")
 

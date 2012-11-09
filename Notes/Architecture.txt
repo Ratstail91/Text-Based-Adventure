@@ -10,3 +10,18 @@ directories:
 
 Parsing:
 	The parsing function splits the input string into an array, then selects the correct function to call based on the first argument. It passes the remaining arguments (after poping the first one) to the function called.
+
+-------------------------
+
+active systems
+
+the active systems are a series of variables that are actively used in the game. Some variables could be:
+
+	inventory	--list of items
+	room list	--list of rooms
+	current room	--reference to the current room
+	weapon		--
+	armour		--list of armour worn
+	etc.
+
+These are saved in the "Active System", which is just a global table called "active".

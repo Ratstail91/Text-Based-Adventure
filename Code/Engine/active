@@ -1,0 +1,26 @@
+--[[
+
+	see Architecture.txt
+	this is the "active" table
+	
+	elements of the active table are:
+	
+		inventory
+		roomlist
+		room
+
+--]]
+
+--preprocessor guard
+if decl_active == nil then
+	decl_active = true
+else
+	return
+end
+
+
+
+active = {}
+
+--create standard variables below this line
+
