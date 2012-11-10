@@ -19,15 +19,17 @@ end
 
 function dohelp(args)
 	--generic help
-	if table.size(args) == 0 then
+	if tablesize(args) == 0 then
 		io.write("Help\n")
 		for key,value in pairs(commands)
-			do io.write(key .. ": " .. value .. "\n")
+			do io.write("  " .. key .. ": " .. value .. "\n")
 		end
 		return NORMAL
 	end
 	
 	--specialised help, in their own functions
+	
+	io.write("\"help [keyword]\" called, but no specialized help just yet.\n")
 	
 	--etc.
 	
