@@ -10,6 +10,8 @@ PARSE_ERROR	= 2
 
 dofile(dir.engine .. "active")
 
+--dofile(dir.engine .. "factory")
+
 dofile(dir.engine .. "parse")
 
 dofile(dir.game .. "main.lua")

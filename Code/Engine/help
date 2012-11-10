@@ -4,6 +4,8 @@
 local commands = {
 ["help"] = "Displays this help.",
 ["look"] = "Displays information about the current room.",
+["move [door]"] = "Move to another room, via this door.",
+["goto [door]"] = "Alias of move.",
 ["exit"] = "Exits the game.",
 ["quit"] = "Alias of exit."
 }
@@ -27,7 +29,7 @@ function dohelp(args)
 		return NORMAL
 	end
 	
-	--specialised help, in their own functions
+	--specialised help inquiries, in their own functions
 	
 	io.write("\"help [keyword]\" called, but no specialized help just yet.\n")
 	

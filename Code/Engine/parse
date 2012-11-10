@@ -37,6 +37,8 @@ function parse(input)
 	if command == "exit" then return doexit(args) end
 	if command == "quit" then return doexit(args) end
 	if command == "look" then return dolook(args) end
+	if command == "move" then return domove(args) end
+	if command == "goto" then return domove(args) end
 	
 	--more to come
 	

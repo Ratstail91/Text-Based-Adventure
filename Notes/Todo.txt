@@ -10,3 +10,12 @@
 *	"Intro" function
 *	a Module to generate locations, rooms, etc.
 *	Generic functions file for split, table size, etc.
+
+*	Should things like rooms, locations, items, etc. have identifyers?
+*	table.type = X where x is:
+
+*		location	= 1
+*		room		= 2
+*		item		= 3
+*		...and so on
+

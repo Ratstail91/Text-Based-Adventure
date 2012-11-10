@@ -6,7 +6,7 @@
 	elements of the active table are:
 	
 		inventory
-		roomlist
+		location
 		room
 
 --]]
@@ -23,4 +23,3 @@ end
 active = {}
 
 --create standard variables below this line
-

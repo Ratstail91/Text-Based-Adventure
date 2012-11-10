@@ -14,3 +14,9 @@ function dolook(args)
 	return NORMAL
 end
 
+function domove(args)
+	io.write("You try to move, but the programmers haven't implemented that functionality yet.\n")
+	
+	return NORMAL
+end
+
