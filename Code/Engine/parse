@@ -55,19 +55,7 @@ end
 
 --standard generic actions go here
 
-<<<<<<< HEAD
-function dohelp(input)
-	io.write("Help\n")
-	for key,value in pairs(commands)
-		do io.write(key .. ": " .. value .. "\n")
-	end
-	return NORMAL
-end
-
-function doexit(input)
-=======
 function doexit(args)
->>>>>>> b3ba252922d1171803831074b4ad6f697f858853
 	io.write("Thanks for playing!\n")
 	return QUIT
 end
