@@ -22,7 +22,8 @@ local name = io.read()
 
 dir = {}
 dir.engine = "Engine/"
-dir.game = "Game/" .. name .. "/"
+dir.games = "Games/"
+dir.loadedgame = dir.games .. name .. "/"
 
 
 dofile(dir.engine .. "main")

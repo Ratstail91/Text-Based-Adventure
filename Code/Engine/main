@@ -14,7 +14,7 @@ dofile(dir.engine .. "active")
 
 dofile(dir.engine .. "parse")
 
-dofile(dir.game .. "main.lua")
+dofile(dir.loadedgame .. "main.lua")
 
 
 
