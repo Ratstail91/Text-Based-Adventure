@@ -1,21 +1,24 @@
 directories:
 
-	Gngine\
-	Game\
+	Engine\
+	Games\
+	Saves\
 
-"Engine\" holds the engine of the TBA, while "Game\" holds the different games available to play.
+"Engine\"	holds the engine of the TBA
+"Games\"	holds the different games available to play
+"Saves\"	holds the saved games for each player in each game
 
 
 -------------------------
 
 Parsing:
-	The parsing function splits the input string into an array, then selects the correct function to call based on the first argument. It passes the remaining arguments (after poping the first one) to the function called.
+	The parsing function splits the input string into an array, then selects the correct function to call based on the first argument. It passes the remaining arguments (after poping the first one) to the function called. This continues until the action is complete.
 
 -------------------------
 
-active systems
+active system
 
-the active systems are a series of variables that are actively used in the game. Some variables could be:
+the active system is a series of variables that are actively used in the game. Some variables could be:
 
 	inventory	--list of items
 	room list	--list of rooms
@@ -24,4 +27,11 @@ the active systems are a series of variables that are actively used in the game.
 	armour		--list of armour worn
 	etc.
 
-These are saved in the "Active System", which is just a global table called "active".
+These are saved in the "Active System", which is just a global table called "active". There is an emergency "preprocessor guard" at the start of this file to prevent it being called twice by accident, thus wiping out the current game. This guard should ideally be in all files, but isn't necessary.
+
+-------------------------
+
+factory system
+
+The factory system is a series of factory functions used to create identical obects each time it is called. "Objects" in this respect are tables, but should probably be revised at a later date.
+

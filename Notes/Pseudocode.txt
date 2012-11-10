@@ -1,49 +1,39 @@
-Parsing:
+mainline
 
-input
+determine the "dir" table, which is used as a directroy reference throughout TBA
 
-parse(string):
-	//check each first level command
-	sscanf(string, "%s", command)
-	
-	if (command == "look")
-		return CommandLook(string + strlen("look"))
-	
-	...
-end
+enter the main loop
+	read the text input
+	parse the input, and act accordingly
+	if the return value signals something went wrong, output the error
+end the main loop
 
 -------------------------
 
-Game State:
-	Normal
-	Quit
-end
+Parsing
 
-First Order Actions:
+split the input into a table
+remove the first entry on the table, this is the "command"
+depending on the command, call the correct "action function" and pass the remaining table to that function
+return the value returned from the action function
+if the correct action function can't be found, return a PARSE_ERROR
+
+-------------------------
+
+Return values from parsing include:
+	QUIT
+	NORMAL
+	PARSE_ERROR
+
+
+First Order Actions (the first word parsed) can include:
 	help
 	look
-	inventory
+	move
+	door
+	do
+	use
 	take
 	drop
-	give -?
-	do -context sensitive
-	move/door
-	wait
-end
-
-main:
-	GameState state = NORMAL
-	
-	while state != QUIT:
-		get input string
-		
-		state = parse(input string)
-	end
-	
-	out "thank you for playing!"
-end
-
-dohelp(string)
-dolook(string)
-...
+	inventory
 

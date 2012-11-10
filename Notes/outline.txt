@@ -1,3 +1,8 @@
+
+THIS FILE IS DEPRECATED, AND KEPT ONLY FOR HISTORICAL REFERNECE. IT'LL BE UPDATED LATER.
+
+-------------------------
+
 What I want:
 	A reusable text based adventure game engine.
 

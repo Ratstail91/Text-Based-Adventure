@@ -1,22 +1,45 @@
-*	Parser
+Key:
+*	Unfinished
+>	Complete
+-	Backburner
+%	Error/help
+
+-------------------------
+
+Major:
+
+>	Parser
 *	Movement around several rooms, and several locations
-*	Saving/loading of rooms & locations
+*	Manipulation of items, both in an inventory and in the world
 
-*	game saves:
-*		Items attributes
-*		Room attributes
-*		character attributes
+*		pickup/drop
+*		push/pull
+*		lock/unlock
 
-*	"Intro" function
-*	a Module to generate locations, rooms, etc.
+*		Could use items like keys on a door, and could have items like levers that can't be collected, only used
+
+*	Loading predesigned games (Bear-Land, Adventure-World)
+*	Saving/loading of locations, rooms, items and character attributes
+
+-	"Intro" functions for rooms (entering a room causes a cave in, can't move back, etc.). This could be done in the game files.
+
+-------------------------
+
+Structural/design:
+
+*	a Module to generate locations, rooms, etc. (this is factory, but is incomplete)
 *	Generic functions file for split, table size, etc.
 
 *	Should things like rooms, locations, items, etc. have identifyers?
 *	table.type = X where x is:
 
-*		location	= 1
-*		room		= 2
-*		item		= 3
-*		...and so on
+*		LOCATION	= 201
+*		ROOM		= 202
+*		ITEM		= 203
+*		...and so on (use 10x for parser returns, 20x for objects, etc.)
+
+-------------------------
+
+Minor:
 
 *	"location" needs a better, less ambiguous term
