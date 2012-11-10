@@ -19,3 +19,4 @@
 *		item		= 3
 *		...and so on
 
+*	"location" needs a better, less ambiguous term
