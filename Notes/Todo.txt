@@ -38,6 +38,9 @@ Structural/design:
 *		ITEM		= 203
 *		...and so on (use 10x for parser returns, 20x for objects, etc.)
 
+*	The active system seems too similar to singletons, I'll need to see if there's another way to do that after the room system is completed.
+*	Don't use the factory system, use indevidual systems like rooms, items, etc. DONT GROUP THEM TOGETHER LIKE THIS.
+
 -------------------------
 
 Minor:
