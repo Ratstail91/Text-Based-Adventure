@@ -2,7 +2,7 @@ roomlist --the global name for the game's roomlist
 
 room:
 	name
-	description
+	desc --description
 	itemlist
 	doorlist
 	xxxlist
@@ -27,10 +27,9 @@ There will only be one roomlist loaded at once, and loading a new one will overr
 	
 	room.newdoor("north", roomlist["parlour"])
 	room.newdoor("south", roomlist["outside"])
-	
-	...
-	
-	location.setroomlist(roomlist)
 
 
 The rooms should be created and added to the roomlist first, before adding the doors, since the other rooms will probably need to exist already.
+
+-------------------------
+

@@ -2,10 +2,25 @@
 
 	This is the room system
 
+	see Pseudocode/Room System.txt
+
 --]]
 
 
-function newlocation(name, description, roomlist)
-	local l = {name, description, roomlist}
-	
+roomlist = {} --init the global table
+
+
+function newroom(name, desc)
+	local r = {}
+
+	r.name = name
+	r.desc = desc
+	r.itemlist = {}
+	r.doorlist = {}
+
+	--adddoor = 
+	--additem = 
+
+	return r
+end
 
