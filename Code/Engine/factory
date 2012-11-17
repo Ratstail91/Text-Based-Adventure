@@ -10,7 +10,7 @@
 	I'm coming at this from a C++ programmer's perspective, so
 	a lot of OOP design is here, even if it's not appropriate.
 
---]]
+--] ] THIS FILE IS CURRENTLY DISABLED
 
 io.write("Debug: Factory loaded\n")
 
@@ -60,3 +60,4 @@ function newitem()
 	return i
 end
 
+--]]

@@ -9,7 +9,7 @@
 		location
 		room
 
---]]
+--] ] THIS FILE IS CURRENTLY DEPRECATED
 
 --preprocessor guard
 if decl_active == nil then
@@ -23,3 +23,5 @@ end
 active = {}
 
 --create standard variables below this line
+
+--]]

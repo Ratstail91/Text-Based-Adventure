@@ -16,7 +16,7 @@ Parsing:
 
 -------------------------
 
-active system
+active system (Deprecated for now)
 
 the active system is a series of variables that are actively used in the game. Some variables could be:
 

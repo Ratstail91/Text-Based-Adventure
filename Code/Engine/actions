@@ -1,5 +1,9 @@
+--[[
 
---specialised, indepth actions go here
+	This is all of the primary actions of the game (at least until a more indepth one is needed).
+
+--]]
+
 
 function dolook(args)
 	io.write("You look around.\n")
@@ -14,9 +18,16 @@ function dolook(args)
 	return NORMAL
 end
 
+
 function domove(args)
 	io.write("You try to move, but the programmers haven't implemented that functionality yet.\n")
 	
 	return NORMAL
+end
+
+
+function doexit(args)
+	io.write("Thanks for playing!\n")
+	return QUIT
 end
 

@@ -1,4 +1,3 @@
-
 --[[
 
 	The parsing function splits the input string into an array, then 
@@ -8,15 +7,8 @@
 --]]
 
 
-
---include
-dofile(dir.engine .. "help")
-dofile(dir.engine .. "actions")
-
-
-
 --predefined utility functions
-local function split(str, c)
+local function split_input(str, c)
 	local array = {}
 	for w in string.gmatch(str, c) do
 		table.insert(array, w)
@@ -25,10 +17,9 @@ local function split(str, c)
 end
 
 
-
 function parse(input)
 	--get the array, & the command
-	local args = split(input, "%g+")
+	local args = split_input(input, "%g+")
 	
 	local command = table.remove(args, 1)
 	
@@ -43,14 +34,5 @@ function parse(input)
 	--more to come
 	
 	return PARSE_ERROR
-end
-
-
-
---standard generic actions go here
-
-function doexit(args)
-	io.write("Thanks for playing!\n")
-	return QUIT
 end
 

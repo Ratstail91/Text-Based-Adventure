@@ -5,17 +5,17 @@ NORMAL		= 1
 PARSE_ERROR	= 2
 
 
+--load the engine
 
---includes
-
-dofile(dir.engine .. "active")
-
---dofile(dir.engine .. "factory")
-
+dofile(dir.engine .. "library")
+dofile(dir.engine .. "help")
+dofile(dir.engine .. "actions")
 dofile(dir.engine .. "parse")
 
-dofile(dir.loadedgame .. "main.lua")
 
+--load the game
+
+dofile(dir.loadedgame .. "main.lua")
 
 
 --main loop

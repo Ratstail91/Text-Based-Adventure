@@ -1,0 +1,19 @@
+--[[
+
+	This is a library of generic functions. I'd rather have them here than
+	spread throughout the project and duplicated.
+
+--]]
+
+
+function file_exists(fname)
+	local f = io.open(fname, "r")
+	if f~=nil then io.close(f) return true else return false end
+end
+
+
+function tablesize(t)
+	local count = 0
+	for _ in pairs(t) do count = count + 1 end
+	return count
+end

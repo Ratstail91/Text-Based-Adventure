@@ -21,14 +21,14 @@ Major:
 *	Loading predesigned games (Bear-Land, Adventure-World)
 *	Saving/loading of locations, rooms, items and character attributes
 
--	"Intro" functions for rooms (entering a room causes a cave in, can't move back, etc.). This could be done in the game files.
+-	"Intro" and "exit" functions for rooms (entering a room causes a cave in, can't move back, etc.). This could be done in the game files.
 
 -------------------------
 
 Structural/design:
 
 *	a Module to generate locations, rooms, etc. (this is factory, but is incomplete)
-*	Generic functions file for split, table size, etc.
+>	Generic functions file for split, table size, etc.
 
 *	Should things like rooms, locations, items, etc. have identifyers?
 *	table.type = X where x is:
