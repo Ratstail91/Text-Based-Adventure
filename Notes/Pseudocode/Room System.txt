@@ -1,0 +1,42 @@
+location:
+	name
+	description
+	roomlist
+end
+
+room:
+	name
+	description
+	itemlist
+	doorlist
+	xxxlist
+end
+
+There will only be one location loaded at once, and loading a new one will override the previous location, so it should probably be saved into the gamesave. The rooms in a location should be created when the location is made, as should the items. So... the syntax in the game files should look something like this:
+
+
+	local roomlist = newroomlist()
+
+	...
+
+	--create the library
+	local room = newroom("library", "General Custard was here earlier, with a candlestick.")
+
+	room.newitem("bfg", GUN, "a custom built gun")
+	room.newitem("clothes", CLOTHING, "a T-shirt & shorts")
+
+	...
+
+	room.newdoor("north", roomlist.find("parlour"))
+	room.newdoor("south", roomlist.find("outside"))
+
+	...
+
+	roomlist.addroom(room)
+
+	...
+
+	location.setroomlist(roomlist)
+
+
+The rooms should be created and added to the location first, before adding the doors, since the other rooms will probably need to exist already.
