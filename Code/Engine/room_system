@@ -1,0 +1,11 @@
+--[[
+
+	This is the room system
+
+--]]
+
+
+function newlocation(name, description, roomlist)
+	local l = {name, description, roomlist}
+	
+
