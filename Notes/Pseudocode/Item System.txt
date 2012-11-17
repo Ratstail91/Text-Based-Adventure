@@ -1,0 +1,53 @@
+item:
+	name
+	description
+	type
+	stats
+end
+
+types:
+	WEAPON
+	ARMOUR
+	FOOD
+	MISCELLANEOUS
+end
+
+"stats" is a type-dependant table.
+
+weapon stats:
+	strength
+	damage
+	enchantment
+end
+
+armour stats:
+	stength
+	damage
+	enchantment
+end
+
+-------------------------
+
+Items will be scattered around inside rooms, and any items that have been collected will be accessed through "inventory".
+
+
+	inventory = {} --also clears the previous table
+
+	...
+
+	local stats = newArmourStats() --can be either armour, weapon, food, etc. probably just nil for now
+
+	--customize the stats of a specific item here too...
+
+	...
+
+	--create teh actual item
+
+	local item = newitem("name", "description", TYPE, stats)
+
+	...
+
+	room.itemlist.insert(item) --put the item into the room
+
+
+I'm only going for the basics.

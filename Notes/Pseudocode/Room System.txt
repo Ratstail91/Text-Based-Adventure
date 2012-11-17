@@ -1,8 +1,4 @@
-location:
-	name
-	description
-	roomlist
-end
+roomlist --the global name for the game's roomlist
 
 room:
 	name
@@ -12,31 +8,29 @@ room:
 	xxxlist
 end
 
-There will only be one location loaded at once, and loading a new one will override the previous location, so it should probably be saved into the gamesave. The rooms in a location should be created when the location is made, as should the items. So... the syntax in the game files should look something like this:
+There will only be one roomlist loaded at once, and loading a new one will override the previous roomlist, so it should probably be saved into the gamesave. The rooms in a roomlist should be created when the roomlist is made, as should the items. So... the syntax in the game files should look something like this:
 
 
-	local roomlist = newroomlist()
-
+	roomlist = {} --also deletes the previous one
+	
 	...
-
+	
 	--create the library
 	local room = newroom("library", "General Custard was here earlier, with a candlestick.")
-
+	
 	room.newitem("bfg", GUN, "a custom built gun")
 	room.newitem("clothes", CLOTHING, "a T-shirt & shorts")
-
+	
+	roomlist.insert(room)
+	
 	...
-
-	room.newdoor("north", roomlist.find("parlour"))
-	room.newdoor("south", roomlist.find("outside"))
-
+	
+	room.newdoor("north", roomlist["parlour"])
+	room.newdoor("south", roomlist["outside"])
+	
 	...
-
-	roomlist.addroom(room)
-
-	...
-
+	
 	location.setroomlist(roomlist)
 
 
-The rooms should be created and added to the location first, before adding the doors, since the other rooms will probably need to exist already.
+The rooms should be created and added to the roomlist first, before adding the doors, since the other rooms will probably need to exist already.

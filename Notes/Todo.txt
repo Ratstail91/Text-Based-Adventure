@@ -45,4 +45,6 @@ Structural/design:
 
 Minor:
 
-*	"location" needs a better, less ambiguous term
+>	"location" needs a better, less ambiguous term
+	"roomlist"
+
