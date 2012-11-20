@@ -1,0 +1,42 @@
+This game is more of a tech demo than anything, using all of the features that SHOULD be implemented in the first demonstration version.
+
+Cave In consists of 5 rooms:
+
+
+Layout:
+
++---+---+---+---+
+|   |   |   |   |
+| 1   2   3   4  
+|   |   |   |   |
++---+---+- -+---+
+        |   |
+        | 5 |
+        |   |
+        +- -+
+
+
+The "story":
+
+The player starts in toom 4
+
+The player moves into room 3, just before a cave in blocks the path between 3 & 4
+
+The door to room 5 is locked, so they must look for a key
+
+They will find the key in room 1, and then return to room 3
+
+Using the key on the door, they can unlock it
+
+They find an exit door inside room 5, and finish the game
+
+
+Breakdown:
+
+This demo uses the following aspects of the engine:
+
+*   one and two way doors
+*   items and the inventory
+*   locked doors and keys
+*   event triggers (the cave in event)
+
