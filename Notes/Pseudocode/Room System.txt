@@ -21,7 +21,7 @@ There will only be one roomlist loaded at once, and loading a new one will overr
 	room.newitem("bfg", GUN, "a custom built gun")
 	room.newitem("clothes", CLOTHING, "a T-shirt & shorts")
 	
-	roomlist.insert(room)
+	--roomlist.insert(room) --this is now done automatically
 	
 	...
 	
@@ -33,3 +33,4 @@ The rooms should be created and added to the roomlist first, before adding the d
 
 -------------------------
 
+roomlist.room will always point to the current room
