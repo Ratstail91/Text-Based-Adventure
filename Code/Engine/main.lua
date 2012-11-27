@@ -1,10 +1,3 @@
---the gamestates available
-
-QUIT		= 0
-NORMAL		= 1
-PARSE_ERROR	= 2
-
-
 --load the engine
 
 dofile(dir.engine .. "library.lua")
@@ -18,20 +11,31 @@ dofile(dir.engine .. "parse.lua")
 dofile(dir.loadedgame .. "main.lua")
 
 
+--the gamestates available
+
+gamestate = tableprotect({
+	quit = 0,
+	normal = 1,
+	parseError = 2,
+})
+
+
 --main loop
 
-local state = NORMAL
+local state = gamestate.normal
 
-while state ~= QUIT do
+while state ~= gamestate.quit do
 	--smooth, consistent interface
 	io.write("TBA>")
 	
 	local input = io.read()
 	
-	state = parse(input)
-	
-	if (state == PARSE_ERROR) then
-		print("Parse Error: ", input)
+	if string.len(input) > 0 then
+		state = parse(input)
+		
+		if (state == gamestate.parseError) then
+			print("Unknown expression: ", input)
+		end
 	end
 end
 

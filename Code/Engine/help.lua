@@ -22,7 +22,7 @@ function dohelp(args)
 		for k,v in pairs(commands) do
 			io.write("\t" .. v .. "\n")
 		end
-		return NORMAL
+		return gamestate.normal
 	end
 	
 	--specialised help inquiries, in their own functions
@@ -31,5 +31,5 @@ function dohelp(args)
 	
 	--etc.
 	
-	return NORMAL
+	return gamestate.normal
 end

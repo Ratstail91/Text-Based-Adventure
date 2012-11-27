@@ -33,6 +33,6 @@ function parse(input)
 	
 	--more to come
 	
-	return PARSE_ERROR
+	return gamestate.parseError
 end
 

@@ -24,7 +24,7 @@ end
 function tableprotect(tbl)
 	return setmetatable({},
 	{
-		__index = t,
+		__index = tbl,
 		__newindex = function(t, k, v)
 			error("Attempting to change constant " .. tostring(k), 2)
 		end
