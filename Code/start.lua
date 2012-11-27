@@ -32,7 +32,7 @@ dir.loadedgame = dir.games .. name .. "/"
 
 if
 	not file_exists("start.lua") or
-	not file_exists("Engine/main") or
+	not file_exists("Engine/main.lua") or
 	not file_exists(dir.loadedgame .. "main.lua")
 then
 	print("Directory error")
@@ -47,4 +47,4 @@ file_exists = nil
 
 --kick the engine into gear
 
-dofile(dir.engine .. "main")
+dofile(dir.engine .. "main.lua")

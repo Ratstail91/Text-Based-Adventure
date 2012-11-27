@@ -7,10 +7,10 @@ PARSE_ERROR	= 2
 
 --load the engine
 
-dofile(dir.engine .. "library")
-dofile(dir.engine .. "help")
-dofile(dir.engine .. "actions")
-dofile(dir.engine .. "parse")
+dofile(dir.engine .. "library.lua")
+dofile(dir.engine .. "help.lua")
+dofile(dir.engine .. "actions.lua")
+dofile(dir.engine .. "parse.lua")
 
 
 --load the game
