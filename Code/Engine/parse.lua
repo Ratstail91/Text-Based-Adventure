@@ -8,7 +8,7 @@
 
 
 --predefined utility functions
-local function split_input(str, c)
+local function splitinput(str, c)
 	local array = {}
 	for w in string.gmatch(str, c) do
 		table.insert(array, w)
@@ -19,7 +19,7 @@ end
 
 function parse(input)
 	--get the array, & the command
-	local args = split_input(input, "%g+")
+	local args = splitinput(input, "%g+")
 	
 	local command = table.remove(args, 1)
 	

@@ -7,7 +7,7 @@
 --]]
 
 
-function file_exists(fname)
+function fileexists(fname)
 	local f = io.open(fname, "r")
 	if f~=nil then io.close(f) return true else return false end
 end
@@ -17,6 +17,18 @@ function tablesize(t)
 	local count = 0
 	for _ in pairs(t) do count = count + 1 end
 	return count
+end
+
+
+--http://www.gammon.com.au/forum/bbshowpost.php?bbsubject_id=8028
+function tableprotect(tbl)
+	return setmetatable({},
+	{
+		__index = t,
+		__newindex = function(t, k, v)
+			error("Attempting to change constant " .. tostring(k), 2)
+		end
+	})
 end
 
 
@@ -36,7 +48,7 @@ end
 
 --debugging functions go here
 
-function debugtable(t) --tmp debug
+function tabledebugdisplay(t) --tmp debug
 	for k, v in pairs(t) do
 		print(k, v)
 	end
