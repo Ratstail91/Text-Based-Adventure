@@ -4,6 +4,12 @@
 	rather have them together here than spread throughout
 	the project and duplicated.
 
+	Please not that tableprotect() and deepcopy don't work well
+	together. To create a deepcopy of a protected table, you must
+	do this:
+
+	copy = deepcopy(getmetatable(orig).__index)
+
 --]]
 
 
