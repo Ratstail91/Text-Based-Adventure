@@ -4,7 +4,7 @@
 	rather have them together here than spread throughout
 	the project and duplicated.
 
-	Please not that tableprotect() and deepcopy don't work well
+	Please note that tableprotect() and deepcopy don't work well
 	together. To create a deepcopy of a protected table, you must
 	do this:
 
@@ -49,6 +49,15 @@ function deepcopy(orig)
 		copy = orig
 	end
 	return copy
+end
+
+
+function splitstring(str, delim)
+	local array = {}
+	for w in string.gmatch(str, delim) do
+		table.insert(array, w)
+	end
+	return array
 end
 
 

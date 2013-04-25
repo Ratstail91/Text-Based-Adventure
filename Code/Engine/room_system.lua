@@ -15,7 +15,7 @@ Room = {
 		name = "No Name", --new rooms should *always* have unique names
 		desc = "No Description", --and descriptions
 		itemlist = {},
-		doorlist = {}
+		doorlist = {} --TODO are doors actual objects, or just references to other rooms?
 	}),
 	list = {} --the global list of rooms
 }
@@ -60,7 +60,7 @@ function Room:delete(arg)
 	end
 
 	if type(arg) == 'string' then
-		Room:delete(Room.list[arg]) --reuse this function
+		Room:delete(Room.list[arg]) --reuse this function (a table)
 		return
 	end
 

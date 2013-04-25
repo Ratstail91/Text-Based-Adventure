@@ -7,19 +7,9 @@
 --]]
 
 
---predefined utility functions
-local function splitinput(str, c)
-	local array = {}
-	for w in string.gmatch(str, c) do
-		table.insert(array, w)
-	end
-	return array
-end
-
-
 function parse(input)
 	--get the array, & the command
-	local args = splitinput(input, "%g+")
+	local args = splitstring(input, "%g+")
 	
 	local command = table.remove(args, 1)
 	
